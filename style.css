@@ -1,3 +1,4 @@
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +11,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center; /* Centers text elements */
 }
 
 h1 {
@@ -23,6 +25,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    margin-bottom: 40px;
 }
 
 .left-section {
@@ -35,7 +38,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .model-image {
@@ -51,9 +53,132 @@ h1 {
     height: 200px;
 }
 
+.question-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #222;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.quiz-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.option-label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Selected and correct/wrong feedback */
+.option.selected {
+    border: 2px solid #007bff;
+}
+
+.option.correct img {
+    border-color: green;
+}
+
+.option.wrong img {
+    border-color: red;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.option-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-2 img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.option-2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Selected and correct/wrong feedback */
+.option-2.selected {
+    border: 2px solid #007bff;
+}
+
+.option-2.correct img {
+    border-color: green;
+}
+
+.option-2.wrong img {
+    border-color: red;
+}
+
+.feedback-2 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .footer {
     background-color: #4a4a4a;
     color: white;
     text-align: center;
     padding: 15px 0;
+    margin-top: 40px;
 }
