@@ -175,6 +175,92 @@ h1 {
     font-weight: bold;
 }
 
+.option-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-3 img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.option-3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Selected and correct/wrong feedback */
+.option-3.selected {
+    border: 2px solid #007bff;
+}
+
+.option-3.correct img {
+    border-color: green;
+}
+
+.option-3.wrong img {
+    border-color: red;
+}
+
+.feedback-3 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.option-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-4 img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #ccc;
+    padding: 4px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.option-4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Selected and correct/wrong feedback */
+.option-4.selected {
+    border: 2px solid #007bff;
+}
+
+.option-4.correct img {
+    border-color: green;
+}
+
+.option-4.wrong img {
+    border-color: red;
+}
+
+.feedback-4 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .footer {
     background-color: #4a4a4a;
     color: white;

@@ -116,7 +116,7 @@
             <div class="feedback"></div>
         </div>
         <!-- Question option 2-->
-         <div class="quiz-section">
+        <div class="quiz-section">
             <div class="question-box">
                 <div class="question-title">Which image shows a reflection?</div>
                 <div class="question-image">
@@ -138,6 +138,51 @@
                 </div>
             </div>
             <div class="feedback-2"></div>
+        </div>
+        <!-- Question option 3-->
+        <div class="quiz-section">
+            <div class="question-box">
+                <div class="question-title">Which image shows a flipped vertically?</div>
+                <div class="question-image">
+                    <img src="lshape.png" alt="L shape image" width="150">
+                </div>
+            </div>
+            <div class="quiz-options">
+                <div class="option-3" data-answer="wrong">
+                    <img src="lshape-flipped-option-a.png" alt="Option A">
+                    <div class="option-label">A</div>
+                </div>
+                <div class="option-3" data-answer="wrong">
+                    <img src="lshape-flipped-option-b.png" alt="Option B">
+                    <div class="option-label">B</div>
+                </div>
+                <div class="option-3" data-answer="correct">
+                    <img src="lshape-flipped-option-c.png" alt="Option C">
+                    <div class="option-label">C</div>
+                </div>
+            </div>
+            <div class="feedback-3"></div>
+        </div>
+        <!-- Question option 4-->
+        <div class="quiz-section">
+            <div class="question-box">
+                <div class="question-title">Which one is a congurent shape?</div>
+            </div>
+            <div class="quiz-options">
+                <div class="option-4" data-answer="correct">
+                    <img src="congurent-option-a.png" alt="Option A">
+                    <div class="option-label">A</div>
+                </div>
+                <div class="option-4" data-answer="wrong">
+                    <img src="congurent-option-b.png" alt="Option B">
+                    <div class="option-label">B</div>
+                </div>
+                <div class="option-4" data-answer="wrong">
+                    <img src="congurent-option-c.png" alt="Option C">
+                    <div class="option-label">C</div>
+                </div>
+            </div>
+            <div class="feedback-4"></div>
         </div>
 
     </div>
@@ -191,12 +236,64 @@
                 // Check if correct
                 if (option.dataset.answer === 'correct') {
                     option.classList.add('correct');
-                    feedback_2.textContent = '✅ Correct! This is a refelection.';
+                    feedback_2.textContent = '✅ Correct! This is a reflection.';
                     feedback_2.style.color = 'green';
                 } else {
                     option.classList.add('wrong');
                     feedback_2.textContent = '❌ Wrong! Try again.';
                     feedback_2.style.color = 'red';
+                }
+            });
+        });
+        // JS for Hover + Click Interaction
+        const options_3 = document.querySelectorAll('.option-3');
+        const feedback_3 = document.querySelector('.feedback-3');
+
+        options_3.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove previous highlights
+                options_3.forEach(opt => {
+                    opt.classList.remove('correct', 'wrong', 'selected');
+                });
+
+                // Add highlight to clicked
+                option.classList.add('selected');
+
+                // Check if correct
+                if (option.dataset.answer === 'correct') {
+                    option.classList.add('correct');
+                    feedback_3.textContent = '✅ Correct! This is a vertically flipped object.';
+                    feedback_3.style.color = 'green';
+                } else {
+                    option.classList.add('wrong');
+                    feedback_3.textContent = '❌ Wrong! Try again.';
+                    feedback_3.style.color = 'red';
+                }
+            });
+        });
+        // JS for Hover + Click Interaction
+        const options_4 = document.querySelectorAll('.option-4');
+        const feedback_4 = document.querySelector('.feedback-4');
+
+        options_4.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove previous highlights
+                options_4.forEach(opt => {
+                    opt.classList.remove('correct', 'wrong', 'selected');
+                });
+
+                // Add highlight to clicked
+                option.classList.add('selected');
+
+                // Check if correct
+                if (option.dataset.answer === 'correct') {
+                    option.classList.add('correct');
+                    feedback_4.textContent = '✅ Correct! This one is a congurent shape.';
+                    feedback_4.style.color = 'green';
+                } else {
+                    option.classList.add('wrong');
+                    feedback_4.textContent = '❌ Wrong! Try again.';
+                    feedback_4.style.color = 'red';
                 }
             });
         });
